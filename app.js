@@ -1,6 +1,23 @@
 const http=require("http")
 const server=http.createServer((req,res)=>{
-    console.log("hello")
-    res.end("welcome sathish")
+   
+    const url=req.url;
+    if(url==="/"){
+        res.write('<html>')
+        res.write('<head><title>enter</title></head>')
+        res.write('<body><h1>welcome </h1></body>')
+        res.write('</html>')
+        console.log("hello")
+        res.end()
+    }
+    if(url==="/home"){
+        res.write('<html>')
+        res.write('<head><title>enter</title></head>')
+        res.write('<body><h1>welcome home </h1></body>')
+        res.write('</html>')
+        console.log("hello")
+        res.end()
+    }
+   
 })
-server.listen(3000)
+server.listen(4000)
